@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery Shop</title>
+
+    <!--Owl-Carousel-->
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+
+    <!-- Fontawesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/reset-css.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <!--About us page Style-->
+    <link rel="stylesheet"  href="/css/about-us.css">
+
+    <!--Navigation Style-->
+    <link rel="stylesheet"  href="/css/navbar.css">
+
+    <!--Custom Style-->
+    <link rel="stylesheet" href="/css/style.css"/>
+
+
+    <script src="/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--    &lt;!&ndash; Bootstrap integration with Js&ndash;&gt;-->
+<!--    <script src="/js/jquery3.6.0.min.js"></script>-->
+<!--    <script src="/js/owl.carousel.js"></script>-->
+    <script>
+        $(function (){
+            $(".toggle").on("click", function (){
+                if($(".nav-link").hasClass("active")){
+                    $(".nav-link").removeClass("active")
+                }else{
+                    $(".nav-link").addClass("active")
+                }
+            })
+        });
+    </script>
+    <script>
+        <!-- Owl carousel responsive script -->
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            margin: 10,
+            loop: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    </script>
+
+</head>
+<body>
+    <header th:fragment="navigation">
+        <!--Start Navigation-->
+        <nav class="main-nav">
+            <div class="nav-menu flex-row">
+                <!--                I don't have any ccs style for this part-->
+
+                <!--                <div class="nav-brand">-->
+                <!--                    <a href="#" class="text-gray">Excellent Luxory Art Shop</a>-->
+                <!--                </div>-->
+                <!--                <div class="toggle-collapse">-->
+                <!--                    <div class="toggle-icons">-->
+                <!--                        <i class="fas fa-bars"></i> &lt;!&ndash;hamburder icon&ndash;&gt;-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <div>
+                    <ul class="nav-items">
+                        <li class="logo">
+                            <a href="/"><img src="/images/crystal_logo.gif" width="80" height="80"></a>
+                        </li>
+                        <li class="nav-link" sec:authorize="isAuthenticated()">
+                            <a th:href="@{/pages/all}">All users</a>
+                        </li>
+
+                        <li class="nav-link" sec:authorize="hasRole('MODERATOR')">
+                            <a th:href="@{/pages/moderator}">Moderator</a>
+                        </li>
+                        <li class="nav-link" sec:authorize="hasRole('ADMIN')">
+                            <a th:href="@{/pages/admin}">Admin</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/products/new-in">New in</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="/products/all">All art</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">Offers</a>
+                        </li>
+                        <li class="nav-link button" sec:authorize="!isAuthenticated()">
+                            <a href="/users/register">Register</a>
+                        </li>
+                        <li class="nav-link button secondary"
+                            sec:authorize="!isAuthenticated()">
+                            <a href="/users/login">Sign in</a>
+                        </li>
+                        <li class="nav-link button secondary" sec:authorize="isAuthenticated()">
+                            <a href="/users/logout" th:metod="post">Logout</a>
+                        </li>
+                        <li class="nav-link button" sec:authorize="!isAuthenticated()">
+                            <a href="/about-us">Contact Us</a>
+                        </li>
+                        <li class="toggle">
+                            <span class="bars"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="social text-gray">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+            <section th:fragment="circletext"></section>
+
+    </main>
+    <footer  th:fragment="footer">
+        <div class=footer>&copy;2022. All rights reserved. Елица Андреева</div>
+        <script src="/js/jquery3.6.0.min.js"></script>
+        <script src="/js/owl.carousel.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".owl-carousel").owlCarousel();
+            });
+        </script>
+    </footer>
+</body>
+</html>

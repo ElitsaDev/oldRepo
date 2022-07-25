@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="fragments/fragment::head"><title>Welcome to Art Gallery Shop</title></head>
+<body>
+<header th:replace="fragments/fragment::navigation"></header>
+  <main class="index-picture">
+        <div class="container-fluid">
+            <h5 class="text-center text-white mt-5">
+                  Welcome to Art Gallery Shop, <br>
+                  <span sec:authorize="isAuthenticated()"
+                      th:text="${#authentication.principal.fullName}">
+                  </span>
+                  <span sec:authorize="!isAuthenticated()">
+                      Anonymous
+                  </span>
+            </h5>
+        </div>
+  </main>
+<footer th:replace="fragments/fragment::footer"></footer>
+</body>
+</html>

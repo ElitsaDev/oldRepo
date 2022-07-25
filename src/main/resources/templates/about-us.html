@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:insert="fragments/fragment::head">
+    <title>About us</title>
+    <!--About us page Style-->
+    <link rel="stylesheet"  href="/static/css/about-us.css">
+</head>
+<body>
+<header th:replace="fragments/fragment::navigation"></header>
+<main>
+    <section th:replace="fragments/fragment::circletext"></section>
+
+    <div class="container-fluid">
+        <div class="circle circle1">
+            <img src="/images/pictureOne.jpg">
+        </div>
+        <div class="circle circle2">
+            <img src="/images/pictureTwo.jpg">
+        </div>
+        <div>
+            <h2>About us</h2>
+        </div>
+        <p>Art Gallery has a strong reputation collaborating with collectors and institutions whilst dealing predominantly in the primary market with current and emerging artists.
+
+            <br>  Our mission is to build strong deep relationships with talented artists establishing themselves as global names within the art world.
+
+            <br>  Art Gallery opened in 2021, in the heart of Mayfair, London, adding to the already immensely meaningful, vibrant and relevant artistic offering for one of the leading art cities in the world.
+
+            <br> The Gallery’s Conservation Department works with curators and scientists to ensure that future generations can enjoy the collection. This involves everything from regular checks on the condition of paintings, to control of the light, temperature and humidity in the Gallery. Conservators also carry out major restorations, which can sometimes take many months or even years..
+        </p>
+    </div>
+    <div class="container-map">
+    <section class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d19864.09707792188!2d-0.16275182274320998!3d51.51299336935031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sbg!2sbg!4v1658594713150!5m2!1sbg!2sbg"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <section class="info-map">
+            <h3>Opening hours</h3>
+            The online shop works 24/7<br>
+            The gallery works:<br>
+            Daily: 10.00–17.00 (Fridays: 20.30)<br>
+            Last entry: 16.00 (Fridays: 19.30)<br>
+            <h3>Getting here</h3>
+            Art Gallery Shop <br>
+            221b Baker Street <br>
+            NW1 6XE, London <br>
+
+            Telephone: 020 7224 3688</p>
+        </section>
+    </section>
+    </div>
+</main>
+</body>
+<footer th:replace="fragments/fragment::footer"></footer>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="fragments/fragment::head">
+    <title>Login and Register page</title>
+</head>
+<body>
+<header th:replace="fragments/fragment::navigation"></header>
+<main>
+    <div class="container" id="container">
+        <input type="checkbox" id="flip">
+
+        <div class="cover">
+            <div class="cover-front">
+                <div class="front">
+                    <!--                    <img src="images/front.jpg" alt="">-->
+                    <div class="text">
+                        <span class="text-1">Every new friend is a <br> new adventure</span>
+                        <span class="text-2">Let's get connected</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cover-back">
+                <div class="back">
+                    <!--                    <img src="images/back.jpg" alt="">-->
+                    <div class="text">
+                        <span class="text-1">Complete miles of journey <br> with one step</span>
+                        <span class="text-2">Let's get started</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form action="#"
+              th:action="@{/users/register}"
+              th:method="post"
+              th:object="${userRegistrationDTO}">
+            <div class="form-content">
+<!--                <div  id="login-form"  class="login-form">-->
+<!--                    <div class="title">Login</div>-->
+<!--                    <div class="input-boxes">-->
+<!--                        <div class="input-box">-->
+<!--                            <i class="fas fa-envelope"></i>-->
+<!--                            <input name="username" type="text" placeholder="Enter your username" required>-->
+<!--                        </div>-->
+<!--                        <div class="input-box">-->
+<!--                            <i class="fas fa-lock"></i>-->
+<!--                            <input name="password" type="password" placeholder="Enter your password" required>-->
+<!--                        </div>-->
+<!--                        <div class="text"><a href="#">Forgot password?</a> </div>-->
+<!--                        <div class="button input-box">-->
+<!--                            <input type="submit" value="Submit">-->
+<!--                        </div>-->
+<!--                        <div class="text login-text">Don't have an account?-->
+<!--                            <label for="flip">-->
+<!--                                <a id="sign-in" class="text-primary" href="/users/register">Signup now</a>-->
+<!--                            </label>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <div  id="signup-form"  class="signup-form">
+                    <div class="title">Signup</div>
+                    <div class="input-boxes">
+                        <div class="input-box">
+                            <i class="fas fa-user"></i>
+                            <input type="text"
+                                   th:field="*{username}"
+                                   placeholder="Enter your username" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-user"></i>
+                            <input type="text"
+                                   th:field="*{fullName}"
+                                   placeholder="Enter your full name" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text"
+                                   th:field="*{email}"
+                                   placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password"
+                                   th:field="*{password}"
+                                   placeholder="Enter your password" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password"
+                                   th:field="*{confirmPassword}"
+                                   placeholder="Confirm your password" required>
+                        </div>
+                        <div class="button input-box">
+                            <input type="submit" class="button" value="Submit">
+                        </div>
+                        <div class="text sign-up-text">Already have an account?
+                            <label for="flip">
+                                <a  id="sign-up" class="text-primary" href="/users/login">Login now</a>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="/static/js/flip.js">
+    </script>
+</main>
+<footer  th:replace="fragments/fragment::footer"></footer>
+</body>
+</html>

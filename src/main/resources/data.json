@@ -1,0 +1,143 @@
+[
+    {
+      "id": 1,
+      "name": "The Mona Lisa",
+      "year": 1503,
+      "author": "Leonardo da Vinci",
+      "price": "15402000"
+    },
+    {
+      "id": 2,
+      "name": "Starry Night",
+      "year": 1889,
+      "author": "Vincent van Gogh",
+      "price": "17203100"
+    },
+    {
+      "id": 3,
+      "name": "The Scream",
+      "year": 1893,
+      "author": "Edvard Munch",
+      "price": "19166400"
+    },
+    {
+      "id": 4,
+      "name": "Guernica",
+      "year": 1937,
+      "author": "Pablo Picasso",
+      "price": "14481100"
+    },
+    {
+      "id": 5,
+      "name": "The Persistence of Memory",
+      "year": 1931,
+      "author": "Salvador Dali",
+      "price": "17145600"
+    },
+    {
+      "id": 6,
+      "name": "Three Musicians",
+      "year": 1921,
+      "author": "Pablo Picasso",
+      "price": "15521700"
+    },
+    {
+      "id": 7,
+      "name": "A Sunday Afternoon on the Island",
+      "year": 1921,
+      "author": "Georges Seurat ",
+      "price": "155217600"
+    },
+    {
+      "id": 8,
+      "name": "Girl with a Pearl Earring",
+      "year": 1665,
+      "author": "Johannes Vermeer",
+      "price": "155217900"
+    },
+    {
+      "id": 9,
+      "name": "Whistler's Mother",
+      "year": 1871,
+      "author": "James McNeill Whistler ",
+      "price": "123218900"
+    },
+    {
+      "id": 10,
+      "name": "Self-Portrait without Beard",
+      "year": 1871,
+      "author": "Vincent van Gogh",
+      "price": "71500000"
+    },
+    {
+      "id": 11,
+      "name": "The Night Watch",
+      "year": 1642,
+      "author": "Rembrandt",
+      "price": "62500000"
+    },
+    {
+      "id": 12,
+      "name": "The Kiss",
+      "year": 1908,
+      "author": "Gustav Klimt",
+      "price": "55500000"
+    },
+    {
+      "id": 13,
+      "name": "Water Lilies",
+      "year": 1840,
+      "author": "Claude Monet",
+      "price": "55500000"
+    },
+    {
+      "id": 14,
+      "name": "The Flower Carrier",
+      "year": 1935,
+      "author": "Diego Rivera",
+      "price": "55500000"
+    },
+    {
+      "id": 15,
+      "name": "American Gothic",
+      "year": 1930,
+      "author": "Grant Wood",
+      "price": "55500000"
+    },
+    {
+      "id": 16,
+      "name": "Cafe Terrace at Night",
+      "year": 1888,
+      "author": "Vincent Van Gogh",
+      "price": "95500000"
+    },
+    {
+      "id": 17,
+      "name": "The Son of Man",
+      "year": 1964,
+      "author": "Rene Magrittees",
+      "price": "71508000"
+    },
+    {
+      "id": 18,
+      "name": "No. 5, 1948",
+      "year": 1948,
+      "author": "Jackson Pollock",
+      "price": "55500000"
+    },
+    {
+      "id": 19,
+      "name": "Bal du moulin de la Galette",
+      "year": 1948,
+      "author": "Pierre-Auguste Renoires",
+      "price": "78100000"
+    },
+    {
+      "id": 20,
+      "name": "Dogs Playing Poker",
+      "year": 1903,
+      "author": "C.M. Coolidge",
+      "price": "39100000"
+    }
+]
+

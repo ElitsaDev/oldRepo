@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+}
+
+nav{
+    background: #5abbbb;
+    padding: 5px 20px;
+}
+ul{
+    list-style-type: none;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.nav-items li{
+    font-size: 16px;
+    padding: 15px 5px;
+}
+.nav-items li a{
+    display: block;
+}
+.logo a{
+    height: 60px;
+    width: 60px;
+    display: block;
+    background: #5abbbb url("/static/images/giphy-5.gif") center;
+}
+/*.logo a{*/
+/*    font-size: 20px;*/
+/*}*/
+.button.secondary{
+    border-bottom: 1px #333 solid;
+}
+/*Mobile menu*/
+.nav-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle{
+    order:1;
+}
+.nav-link.button{
+    order:2;
+}
+.nav-link{
+    width: 100%;
+    text-align: center;
+    order:3;
+    display: none;
+}
+.nav-link.active{
+    display: block;
+}
+.toggle{
+    cursor: pointer;
+}
+.bars{
+    background: #999;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    width: 18px;
+}
+.bars::before,
+.bars::after{
+    background: #999;
+    content: '';
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    width: 18px;
+}
+
+.bars::before{
+    top: 5px;
+}
+.bars::after{
+    top: -5px;
+}
+
+/*Tablet menu*/
+@media all and (min-width: 468px) {
+    .nav-items{
+        justify-content: center;
+    }
+    .logo{
+        flex:1;
+    }
+    .nav-link.button{
+        width: auto;
+        order:1;
+        display: block;
+    }
+    .toggle{
+        order:2;
+    }
+    .button.secondary{
+        border:0;
+    }
+    .button a{
+        text-decoration: none;
+        padding: 7px 15px;
+        background: #5b13b9;
+        border: 1px solid #66095e;
+        border-radius: 50em;
+    }
+    .button.secondary a{
+        background: transparent;
+    }
+    .button a:hover{
+        transition: all 0.25s;
+    }
+    .button:not(.secondary) a:hover{
+        background: #7d2ae8;
+        border-color: #66095e;
+    }
+    .button.secondary a:hover{
+        color: #333;
+    }
+}
+/*Desktop menu*/
+@media all and (min-width: 768px) {
+    .nav-link{
+        display: block;
+        width: auto;
+    }
+    .toggle{
+        display: none;
+    }
+    .logo{
+        order: 0;
+    }
+    .nav-link{
+        order: 1;
+    }
+    .button{
+        order: 2;
+    }
+
+    .nav-items{
+        padding: 15px 10px;
+    }
+    .nav-items li.button{
+        padding-right:0;
+    }
+}
